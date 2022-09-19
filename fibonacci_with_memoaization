@@ -1,0 +1,12 @@
+int fib(int i, Map<int, int> m) {
+  if (m.containsKey(i)) {
+    return m[i]!;
+  } else if (i < 2) {
+    return 1;
+  } else if (i == 2) {
+    return 2;
+  } else {
+    m[i] = fib(i - 2, m) + fib(i - 1, m);
+    return m[i]!;
+  }
+}
