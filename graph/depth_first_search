@@ -1,0 +1,23 @@
+//The graph is a List of Lists adjacent vertices
+// every list in the graph represents one vertex with index as its int and list elements as adjacent vertices
+// dfs return map of parents of all verteces
+// drsVisit returns map of parents of verteces reachable from source
+
+Map dfs(List<List<int>> graph, Map parent, int source){
+  for(int i=0;i<graph.length;i++){
+  if(!parent.containsKey(i)){
+    dfsVisit(graph[i],i,graph,parent);
+  }}
+  return(parent);
+}
+
+Map dfsVisit(List<int> adj, int source, List<List<int>> graph,Map parent){
+  parent[0]=null;
+  for(int i=0;i<adj.length;i++){
+    if(!parent.containsKey(graph[source][i])){
+      parent[graph[source][i]]=source;
+      dfsVisit(graph[graph[source][i]],graph[source][i],graph,parent);
+    }
+  }
+  return parent;
+}
