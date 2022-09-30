@@ -1,0 +1,25 @@
+//Given an array of integers, calculate the ratios of its elements that are positive,
+//negative, and zero. Print the decimal value of each fraction on a new line with 6 places after the decimal.
+
+//Note: This challenge introduces precision problems. The test cases are scaled to six decimal places,
+//though answers with absolute error of up to 10^-4  are acceptable.
+
+void plusMinus(List<int> list) {
+  int length = list.length;
+  int zeros = 0;
+  int positive = 0;
+  int negative = 0;
+
+  for (int i = 0; i < list.length; i++) {
+    if (list[i] == 0) {
+      zeros++;
+    } else if (list[i] < 0) {
+      negative++;
+    } else {
+      positive++;
+    }
+  }
+  print('${(positive / length).toStringAsFixed(6)}');
+  print('${(negative / length).toStringAsFixed(6)}');
+  print('${(zeros / length).toStringAsFixed(6)}');
+}
