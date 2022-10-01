@@ -1,0 +1,8 @@
+// Simple arrey sum
+//Given an array of integers, find the sum of its elements.
+
+//For example, if the array [1,2,3] so return 6.
+
+int simpleArreySum(List<int> list){
+  return list.reduce((value,element)=>value+element);
+}
