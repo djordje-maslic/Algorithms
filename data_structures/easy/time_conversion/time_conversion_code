@@ -1,0 +1,14 @@
+String timeConversion(String s) {
+  String rez = s.substring(0, s.length - 2);
+  if (s.contains('AM')|| s.contains('am')) {
+    if (s.substring(0, 3).contains('12')) {
+      rez = '00:${rez.substring(3, rez.length)}';
+    }
+  } else {
+    if (int.parse(rez.substring(0, 2)) != 12) {
+      int houres = int.parse(rez.substring(0, 2)) + 12;
+      rez = '$houres${rez.substring(2, rez.length)}';
+    }
+  }
+  return rez;
+}
