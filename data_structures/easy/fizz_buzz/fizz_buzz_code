@@ -1,1 +1,14 @@
+void fizzBuzz(int n) {
+for(int i=1;i<=n; i++){
+  if(i.remainder(3)==0 && (i).remainder(5)==0 ){
+    print('fizBuz');
+  }else if(i.remainder(3)==0 && (i).remainder(5)>0){
+    print('fiz');
+  }else if(i.remainder(3)>0 && (i).remainder(5)==0){
+    print('buz');
+  }else if(i.remainder(3)>0 && (i).remainder(5)>0){
+    print(i);
+  }
+}
+}
 
