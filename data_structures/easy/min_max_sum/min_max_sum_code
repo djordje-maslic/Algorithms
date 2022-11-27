@@ -1,0 +1,10 @@
+void miniMaxSum(List<int> list) {
+  list.sort();
+  List<int> minList = list.sublist(0, list.length - 1);
+  List<int> maxList = list.sublist(1, list.length);
+  print('${minList.reduce((v, e) {
+    return v + e;
+  })} ${maxList.reduce((v, e) {
+    return v + e;
+  })}');
+}
